@@ -1,37 +1,40 @@
-// print full docker login command for aws ecr
+##### print full docker login command for aws ecr
 
-aws ecr get-login
+    aws ecr get-login
 
-// login in docker private repo
+##### login in docker private repo
 
-docker login -u username -p password 
+    docker login -u username -p password 
 
-cat .docker/config.json
-cat .docker/config.json | base64
+##### generated file
+    cat .docker/config.json
+    cat .docker/config.json | base64
 
-// create docker login secret from config.json file
+##### create docker login secret from config.json file
 
-kubectl create secret generic my-registry-key \
-> --from-file=.dockerconfigjson=.docker/config.json \
-> --type=kubernetes.io/dockerconfigjson
+    kubectl create secret generic my-registry-key \
+    --from-file=.dockerconfigjson=.docker/config.json \
+    --type=kubernetes.io/dockerconfigjson
 
-kubectl create secret generic my-registry-key --from-file=.dockerconfigjson=.docker/config.json --type=kubernetes.io/dockerconfigjson
+    kubectl create secret generic my-registry-key --from-file=.dockerconfigjson=.docker/config.json --type=kubernetes.io/dockerconfigjson
 
-kubect get secret
+    kubect get secret
 
-// create docker login secret with login credentials
+##### create docker login secret with login credentials
 
-docker create secret docker-registry my-registry-key \
-> --docker-server=https://private-repo \
-> --docker-username=user \
-> --docker-password=pwd
+    docker create secret docker-registry my-registry-key \
+    --docker-server=https://private-repo \
+    --docker-username=user \
+    --docker-password=pwd
 
-docker create secret docker-registry my-registry-key --docker-server=https://private-repo --docker-username=user --docker-password=pwd
+    docker create secret docker-registry my-registry-key --docker-server=https://private-repo --docker-username=user --docker-password=pwd
 
-minikube ssh
+##### access minikube console
 
-// copy config.json file from Minikube to my host
+    minikube ssh
 
-scp -i $(minikube ssh-key) docker@$(minikube ip):.docker/config.json .docker/config.json
+##### copy config.json file from Minikube to my host
+
+    scp -i $(minikube ssh-key) docker@$(minikube ip):.docker/config.json .docker/config.json
 
 
