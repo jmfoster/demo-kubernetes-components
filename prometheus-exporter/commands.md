@@ -14,7 +14,7 @@
     helm install prometheus prometheus-community/kube-prometheus-stack --version "9.4.1"
 
 ###### Link to chart
-    [https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack]
+[https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack]
 
 
 
@@ -31,7 +31,7 @@
     helm install mongodb-exporter prometheus-community/prometheus-mongodb-exporter --version "2.8.1"
 
 ###### Link to chart
-    [https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-mongodb-exporter]
+[https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-mongodb-exporter]
 
 
 
