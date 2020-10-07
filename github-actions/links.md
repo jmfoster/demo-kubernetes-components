@@ -1,4 +1,4 @@
-#### links for the video
+#### Links for the GitHub Actions video
 
 GitHub Actions:
 * https://github.com/actions
