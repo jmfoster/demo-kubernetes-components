@@ -1,6 +1,6 @@
 #### Links for the GitHub Actions video
 
-GitHub Actions:
+List of GitHub Actions:
 * https://github.com/actions
 * https://github.com/marketplace?type=actions
 
