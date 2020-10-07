@@ -22,7 +22,7 @@
 
 ##### create docker login secret with login credentials
 
-    docker create secret docker-registry my-registry-key \
+    kubectl create secret docker-registry my-registry-key \
     --docker-server=https://private-repo \
     --docker-username=user \
     --docker-password=pwd
