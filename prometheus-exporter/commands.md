@@ -43,7 +43,7 @@
 ###### Grafana
     kubectl port-forward deployment/prometheus-grafana 3000
 
-######## Grafana Dashboard credentials
+###### Grafana Dashboard credentials
     user: admin
     pwd: prom-operator (from values.yaml file set as default)
 
