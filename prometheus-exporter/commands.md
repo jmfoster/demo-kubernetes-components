@@ -40,6 +40,9 @@
 ###### Prometheus-UI
     kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090
 
+###### Alert Manager UI
+    kubectl port-forward svc/prometheus-kube-prometheus-alertmanager 9093
+
 ###### Grafana
     kubectl port-forward deployment/prometheus-grafana 3000
 
